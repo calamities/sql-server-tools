@@ -1,6 +1,6 @@
 
 -- =============================================
--- Author: calamities
+-- Author: Cal Walsman
 -- Create date: 2017-10-30
 -- Description:
 -- Creates a user defined table value function
