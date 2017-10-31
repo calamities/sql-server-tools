@@ -14,7 +14,7 @@ RETURNS @calendar TABLE (
   [date] smalldatetime
 )
 AS
--- Returns the first name, last name, job title, and contact type for the specified contact.
+
 BEGIN
 
   DECLARE @rows int
