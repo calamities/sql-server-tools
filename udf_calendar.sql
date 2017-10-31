@@ -20,8 +20,6 @@ BEGIN
   DECLARE @rows int
   DECLARE @i int = 1
 
-  SET @datestart = '2015-01-01'
-  SET @dateend = '2018-12-31'
   SELECT
     @rows = DATEDIFF(DAY, @datestart, @dateend)
 
