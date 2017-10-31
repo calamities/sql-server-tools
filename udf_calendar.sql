@@ -1,4 +1,13 @@
 
+-- =============================================
+-- Author: calamities
+-- Create date: 2017-10-30
+-- Description:
+-- Creates a user defined table value function
+-- that outputs a calendar table based on a
+-- start and end date.
+-- =============================================
+
 CREATE FUNCTION dbo.udf_calendar (@datestart smalldatetime, @dateend smalldatetime)
 RETURNS @calendar TABLE (
   [day] int,
