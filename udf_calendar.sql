@@ -1,0 +1,35 @@
+
+CREATE FUNCTION dbo.udf_calendar (@datestart smalldatetime, @dateend smalldatetime)
+RETURNS @calendar TABLE (
+  [day] int,
+  [date] smalldatetime
+)
+AS
+-- Returns the first name, last name, job title, and contact type for the specified contact.
+BEGIN
+
+  DECLARE @rows int
+  DECLARE @i int = 1
+
+  SET @datestart = '2015-01-01'
+  SET @dateend = '2018-12-31'
+  SELECT
+    @rows = DATEDIFF(DAY, @datestart, @dateend)
+
+  WHILE (@i <= @rows)
+  BEGIN
+
+    INSERT INTO @calendar ([day])
+      VALUES (@i)
+
+    SET @i = @i + 1
+
+  END
+
+  UPDATE a
+  SET [date] = DATEADD(DAY, [day] - 1, @datestart)
+  --select *, DATEADD(day,id-1,@datestart)
+  FROM @calendar a
+
+  RETURN
+END
