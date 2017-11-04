@@ -8,7 +8,7 @@
 -- start and end date.
 -- =============================================
 
-CREATE FUNCTION dbo.udf_calendar (@datestart smalldatetime, @dateend smalldatetime)
+CREATE FUNCTION dbo.udf_HotDate (@datestart smalldatetime, @dateend smalldatetime)
 RETURNS @calendar TABLE (
   [day] int,
   [date] smalldatetime
